@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecrire roman</title>
+    <style>
+        .p1 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 99px;
+            color: rgb(247, 239, 239);
+        }
+        
+        .p2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 50px;
+            color: white;
+            float: left;
+            margin-left: 333px;
+        }
+        
+        .p3 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 50px;
+            color: white;
+            float: right;
+            margin-right: 333px;
+        }
+        
+        body {
+            background-image: linear-gradient(rgba(26, 25, 25, 0.527), rgba(10, 10, 10, 0.5)), url("images/13.jpg");
+            background-size: cover;
+        }
+        
+        textarea {
+            width: 921px;
+            height: 529px;
+            font-size: 22px;
+        }
+        
+        #select1 {
+            width: 200px;
+            height: 44px;
+            font-size: 20px;
+        }
+        
+        .photo {
+            width: 95px;
+            height: 95px;
+            position: absolute;
+            top: 2%;
+            left: 2%
+        }
+    </style>
+</head>
+
+<body>
+
+    <form name="h" method="" action="">
+        <p style="font-size: 33px; color: white;"> Vous pouvez ecrire votre roman personnel ici : </p>
+        <textarea type="text" name="t"></textarea><br><br>
+        <p style="font-size: 33px; color: white;">Type de roman :
+            <select name="type_select" id="select1" tyle="width:50px;"></p> 
+            <option value="">--Choisir un type--</option>
+            <option value="aventure">Aventure</option>
+            <option value="theatre">Theatre</option>
+            <option value="histoire">Histoire</option>
+            <option value="science">Science</option>
+           
+        </select>
+            <br><br><br>
+            <input style="font-size: 33px;" type="submit" value="Ajouter mon roman"></input>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        body {
+            background: linear-gradient(0.25turn, blue, brown, pink);
+        }
+        
+        .form {
+            background-color: aliceblue;
+            margin-top: 6%;
+            margin-right: 35%;
+            margin-left: 35%;
+            padding: 3%;
+            box-shadow: 15px 15px black;
+        }
+        
+        .form input {
+            font-family: 'Times New Roman', Times, serif;
+            outline: 4;
+            padding: 20px;
+            width: 90%;
+            margin: 0 0 20px;
+            font-size: 20px;
+        }
+        
+        .form button {
+            background: #4CAF50;
+            font-size: 18px;
+            padding: 5%;
+            cursor: pointer;
+            width: 40%;
+            color: #FFFFFF;
+            margin-left: 30%;
+            border: 0;
+            outline: 0;
+        }
+    </style>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+
+    <script language='javascript'>
+        function validation() {
+            var test = true;
+
+            if (document.p.nom.value == "") {
+                alert("champs nom ne doit etre vide");
+                test = false;
+            } else
+            if (document.p.prenom.value == "") {
+                alert("champs prenom ne doit etre vide");
+                test = false;
+            } else
+            if (document.p.mail.value == "") {
+                alert("champs adress mail ne doit etre vide");
+                test = false;
+            } else
+            if (document.p.mot_de_passe.value == "") {
+                alert("champs mot de passe ne doit etre vide");
+                test = false;
+            } else
+            if ((document.p.mot_de_passe.value).lenght < 8) {
+                alert("mot de passe doit contenir 8 caractére au minimum");
+                test = false;
+            } else
+            if (document.p.mot_de_passe.value.search(/[A-Z]/) == -1) {
+                alert("mot de passe doit inclure des caractére majuscule");
+                test = false;
+            } else
+            if (document.p.mot_de_passe.value.search(/[0-9]/) == -1) {
+                alert("mot de passe doit inclure des chiffres");
+                test = false;
+            } else
+            if (document.p.retype.value == "") {
+                alert("le dernier champs ne doit etre vide");
+                test = false;
+            } else
+            if ((document.p.mot_de_passe.value) != (document.p.retype.value)) {
+                alert(" les mots de passes ne sont pas identque");
+                test = false;
+            }
+
+
+
+
+            return test;
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div class="form">
+        <form name="p" onsubmit="return validation2()" action="/register" method="post">
+            <input name="nom" type="text" placeholder="Tapez votre nom ici "><br>
+            <input name="prenom" type="text" placeholder="Tapez votre prenom ici "><br>
+            <input name="mail" type="email" placeholder="Tapez votre email ici "><br>
+            <input name="mot_de_passe" type="password" placeholder="Tapez votre mot de passe ici "><br>
+            <input name="retype" type="password" placeholder="Retapez votre mot de passe ici">
+            <button type="submit">SIGN UP</button>
+        </form>
+    </div>
+
+
+
+
+    </form>
+
+</body>
+
+</html>

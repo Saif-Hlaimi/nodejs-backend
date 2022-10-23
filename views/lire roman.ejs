@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lire roman</title>
+
+    <style>
+        body {
+            background-image: linear-gradient(rgba(26, 25, 25, 0.527), rgba(10, 10, 10, 0.5)), url("images/13.jpg");
+            background-size: cover;
+        }
+        
+        textarea {
+            width: 921px;
+            height: 529px;
+            font-size: 22px;
+        }
+        
+        #select1 {
+            width: 200px;
+            height: 44px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form name="f" method="post" action="lire.php">
+        <p style="font-size: 33px; color: white;">Choisir le type de roman favorit :
+            <select name="type_select" id="select1" tyle="width:50px;"></p> 
+            <option value="">--Choisir un type--</option>
+            <option value="aventure">Aventure</option>
+            <option value="theatre">Theatre</option>
+            <option value="histoire">Histoire</option>
+            <option value="science">Science</option>
+            
+        </select>
+            <br><br><br>
+            <input style="font-size: 33px;" type="submit" value="Chercher selon le type"></input>
+
+    </form>
+
+</body>
+
+</html>
